@@ -1,30 +1,34 @@
 # TheGeneralizedSBM.jl
 
-This code base is using the [Julia Language](https://julialang.org/) and
-[DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/)
-to make a reproducible scientific project named
-> TheGeneralizedSBM.jl
+A [julia](https://julialang.org/)-based implementation of the Generalized Shifted Boundary Method using [Gridap.jl](https://github.com/gridap/Gridap.jl).
 
-It is authored by Oriol Colomes.
+## What is GSBM?
 
-To (locally) reproduce this project, do the following:
+The **Generalized Shifted Boundary Method (GSBM)** is a geometry-agnostic finite element formulation that:
+- Generalizes the Shifted Boundary Method (SBM) and the Weighted Shifted Boundary Method (WSBM)
+- Avoids the need for redefinition of integration domains, FE spaces and geometry-specific data structures
+- Is robust for problems with topological changes and moving domains
 
-0. Download this code base. Notice that raw data are typically not included in the
-   git-history and may need to be downloaded independently.
-1. Open a Julia console and do:
-   ```
-   julia> using Pkg
-   julia> Pkg.add("DrWatson") # install globally, for using `quickactivate`
-   julia> Pkg.activate("path/to/this/project")
-   julia> Pkg.instantiate()
-   ```
-
-This will install all necessary packages for you to be able to run the scripts and
-everything should work out of the box, including correctly finding local paths.
-
-You may notice that most scripts start with the commands:
+## Installation
+`TheGeneralizedSBM` is a package registered in the official [Julia package registry](https://github.com/JuliaRegistries/General).  Thus, the installation of this package is straight forward using the [Julia's package manager](https://julialang.github.io/Pkg.jl/v1/). Open the Julia REPL, type `]` to enter package mode, and install as follows
 ```julia
-using DrWatson
-@quickactivate "TheGeneralizedSBM.jl"
+pkg> add TheGeneralizedSBM
 ```
-which auto-activate the project and enable local path handling from DrWatson.
+
+## Usage
+To run all the test cases in the GSBM journal paper do:
+```julia
+using TheGeneralizedSBM
+run_tests("all")
+```
+
+To run only a specific test, for example the Poisson manufactured solution test, do:
+```julia
+using TheGeneralizedSBM
+run_tests("ManufacturedSolutionsPoisson.jl")
+```
+
+After execution, the data will be stored in the respective folder `data/<problem-type>/<test-name>`. If the flag to generate VTK files is active, the VTK output will be stored in `data/<problem-type>/<test-name>/VTK_<geometry-name>`. The plots shown in the manuscript are stored in `plots/<problem-type>/<test-name>`.
+
+This repository uses DrWatson package, the data will only be generated the first time the tests are executed. If the data is already stored, the scripts will only regenerate the figures.
+

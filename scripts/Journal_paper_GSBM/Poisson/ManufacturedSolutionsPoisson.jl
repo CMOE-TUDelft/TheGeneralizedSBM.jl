@@ -19,7 +19,7 @@ f(x) = -tr(∇∇(u)(x))
 # Warm-up parameters
 ϕ = level_set(ParallelogramParams(v₁=[0.21,0.21],v₂=[0.64,0.31],v₃=[0.83,0.83],v₄=[0.37,0.73],in_out=1))
 n_cells = (8,8)
-output_folder = datadir("sims","ManufacturedPoisson")
+output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson")
 params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,order=2)
 
 # Execute main function (Warm-up)
@@ -71,13 +71,13 @@ end
 
 # Execute cases
 for case in cases
-  path = datadir("sims","ManufacturedPoisson")
+  path = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson")
   filename = config -> savename(config,allowedtypes=(Real, String, Symbol, Function))
   data, file = produce_or_load(path,case,execute_case;filename=filename)
 end
 
 # Get data
-all_results = collect_results(datadir("sims","ManufacturedPoisson"))
+all_results = collect_results(datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson"))
 plot_geom_cases = [:circle,:flower,:parallelogram]
 plot_approaches = [:standard,:binary,:fraction]
 plot_orders = [1]
@@ -108,7 +108,7 @@ for (igeom, geom_case) in enumerate(plot_geom_cases)
     end
   end
   display(plt)
-  savefig(plt,plotsdir("ManufacturedPoisson",filenames[igeom]))
+  savefig(plt,plotsdir("Journal_paper_GSBM","Poisson","ManufacturedPoisson",filenames[igeom]))
 end
 
 function plot_vtk_shapes(n)
@@ -116,19 +116,19 @@ function plot_vtk_shapes(n)
 
   # VTK results circle case
   ϕ = level_set(CircleParams(center=center,radius=radius))
-  output_folder = datadir("sims","ManufacturedPoisson","VTK_circle")
+  output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson","VTK_circle")
   params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,β₁=β₁,β₂=β₂,β₃=β₃)
   main_poisson(params)
 
   # VTK results flower case
   ϕ = level_set(FlowerParams(center=center,radius=radius,n=n_petals))
-  output_folder = datadir("sims","ManufacturedPoisson","VTK_flower")
+  output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson","VTK_flower")
   params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,β₁=β₁,β₂=β₂,β₃=β₃)
   main_poisson(params)
 
   # VTK results parallelogram case
   ϕ = level_set(ParallelogramParams(v₁=[0.21,0.21],v₂=[0.64,0.31],v₃=[0.83,0.83],v₄=[0.37,0.73],in_out=1))
-  output_folder = datadir("sims","ManufacturedPoisson","VTK_parallelogram")
+  output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson","VTK_parallelogram")
   params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,β₁=β₁,β₂=β₂,β₃=β₃)
   main_poisson(params)
 
@@ -140,17 +140,17 @@ function plot_vtk_approaches(n)
   ϕ = level_set(CircleParams(center=center,radius=radius))
 
   # VTK results flower WSBM case
-  output_folder = datadir("sims","ManufacturedPoisson","VTK_circle_standard")
+  output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson","VTK_circle_standard")
   params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,weight_approach=:standard,β₁=β₁,β₂=β₂,β₃=β₃)
   main_poisson(params)
 
   # VTK results flower SBM case
-  output_folder = datadir("sims","ManufacturedPoisson","VTK_circle_binary")
+  output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson","VTK_circle_binary")
   params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,weight_approach=:binary,β₁=β₁,β₂=β₂,β₃=β₃)
   main_poisson(params)
 
   # VTK results flower λ-SBM case
-  output_folder = datadir("sims","ManufacturedPoisson","VTK_circle_fraction")
+  output_folder = datadir("sims","Journal_paper_GSBM","Poisson","ManufacturedPoisson","VTK_circle_fraction")
   params = PoissonParams(ϕ=ϕ,f=f,u₀=u,n_cells=n_cells,output_folder=output_folder,weight_approach=:fraction,λ=0.5,β₁=β₁,β₂=β₂,β₃=β₃)
   main_poisson(params)
 

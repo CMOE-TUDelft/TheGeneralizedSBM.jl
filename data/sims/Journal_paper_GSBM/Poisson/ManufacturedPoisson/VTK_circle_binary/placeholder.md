@@ -1,0 +1,1 @@
+Empty file used as placeholder of the current folder

@@ -27,6 +27,7 @@ To run only a specific test, for example the Poisson manufactured solution test,
 using TheGeneralizedSBM
 run_tests("ManufacturedSolutionsPoisson.jl")
 ```
+All the tests in `scripts` folder can be executed.
 
 After execution, the data will be stored in the respective folder `data/<problem-type>/<test-name>`. If the flag to generate VTK files is active, the VTK output will be stored in `data/<problem-type>/<test-name>/VTK_<geometry-name>`. The plots shown in the manuscript are stored in `plots/<problem-type>/<test-name>`.
 

@@ -11,7 +11,6 @@ include("TimeIntegrator.jl")
 include("Poisson.jl")
 include("LinearElasticity.jl")
 include("Stokes.jl")
-include("NavierStokes.jl")
 include("TransientStokes.jl")
 
 export compute_weights

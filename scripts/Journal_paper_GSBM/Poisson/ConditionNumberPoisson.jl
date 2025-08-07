@@ -97,15 +97,15 @@ global plot_ref_line = true
 for (i,radius) in enumerate(radius)
   global plot_ref_line 
   results = @linq all_results[
-    all_results.:ϕ_name.==:circle .&& 
+    # all_results.:ϕ_name.==:circle .&& 
     all_results.:weight_approach.==:fraction .&& 
     all_results.:order.==order .&& 
     all_results.:radius.==radius,:] |> orderby(:n)
     plot!(plt,results.:n,results.:cond,marker=:circle,label="R = $radius",color=color=colors[i],xticks = (results.:n, string.(results.:n)),lw=1.5)
     plot!(plt2,results.:n,results.:l2norm,marker=:circle,label="R = $radius",color=color=colors[i],xticks = (results.:n, string.(results.:n)),lw=1.5)
   if plot_ref_line
-    shift_4 = 7.0e0
-    shift_2 = 5.0e-1
+    shift_4 = 3.0e1
+    shift_2 = 1.0e1
     shift_e = 2.0e2
     plot!(plt,results.:n,shift_4*(results.:n).^(4),xticks = (results.:n, string.(results.:n)),ls=:dash,color=:black,label=false,lw=1.5)
     x_triangle = [40, 40, 50]

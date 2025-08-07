@@ -12,9 +12,13 @@ The **Generalized Shifted Boundary Method (GSBM)** is a geometry-agnostic finite
 - Is robust for problems with topological changes and moving domains
 
 ## Installation
-`TheGeneralizedSBM` is a package registered in the official [Julia package registry](https://github.com/JuliaRegistries/General).  Thus, the installation of this package is straight forward using the [Julia's package manager](https://julialang.github.io/Pkg.jl/v1/). Open the Julia REPL, type `]` to enter package mode, and install as follows
+The installation of this package is straight forward using the [Julia's package manager](https://julialang.github.io/Pkg.jl/v1/). Open the Julia REPL, type `]` to enter package mode, and install as follows
 ```julia
-pkg> add TheGeneralizedSBM
+pkg> add https://github.com/CMOE-TUDelft/TheGeneralizedSBM.jl
+```
+or
+```julia
+using Pkg; Pkg.add(url="https://github.com/JuliaLang/Example.jl")
 ```
 
 ## Usage

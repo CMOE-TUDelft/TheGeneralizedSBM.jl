@@ -44,7 +44,7 @@
       </Property>
       <Property name="Play" id="263.Play"/>
       <Property name="PlayMode" id="263.PlayMode" number_of_elements="1">
-        <Element index="0" value="0"/>
+        <Element index="0" value="2"/>
         <Domain name="enum" id="263.PlayMode.enum">
           <Entry value="0" text="Sequence"/>
           <Entry value="2" text="Snap To TimeSteps"/>
@@ -563,39 +563,39 @@
         <Domain name="range" id="11125.NumberOfTableValues.range"/>
       </Property>
       <Property name="RGBPoints" id="11125.RGBPoints" number_of_elements="36">
-        <Element index="0" value="0.0000030703006117146966"/>
+        <Element index="0" value="0.0001024959977518753"/>
         <Element index="1" value="0.0564"/>
         <Element index="2" value="0.0564"/>
         <Element index="3" value="0.47"/>
-        <Element index="4" value="0.0017735815456686786"/>
+        <Element index="4" value="0.003647060828706343"/>
         <Element index="5" value="0.243"/>
         <Element index="6" value="0.46035"/>
         <Element index="7" value="0.81"/>
-        <Element index="8" value="0.0030829439080543586"/>
+        <Element index="8" value="0.006268405253174214"/>
         <Element index="9" value="0.356814"/>
         <Element index="10" value="0.745025"/>
         <Element index="11" value="0.954368"/>
-        <Element index="12" value="0.0044618402538450855"/>
+        <Element index="12" value="0.009028956764195083"/>
         <Element index="13" value="0.6882"/>
         <Element index="14" value="0.93"/>
         <Element index="15" value="0.91791"/>
-        <Element index="16" value="0.005162143115943911"/>
+        <Element index="16" value="0.010430963615573422"/>
         <Element index="17" value="0.899496"/>
         <Element index="18" value="0.944646"/>
         <Element index="19" value="0.768657"/>
-        <Element index="20" value="0.006072471832354904"/>
+        <Element index="20" value="0.01225344238367326"/>
         <Element index="21" value="0.957108"/>
         <Element index="22" value="0.833819"/>
         <Element index="23" value="0.508916"/>
-        <Element index="24" value="0.0072891359743946955"/>
+        <Element index="24" value="0.014689204901984115"/>
         <Element index="25" value="0.927521"/>
         <Element index="26" value="0.621439"/>
         <Element index="27" value="0.315357"/>
-        <Element index="28" value="0.008749143262988078"/>
+        <Element index="28" value="0.017612140580892378"/>
         <Element index="29" value="0.8"/>
         <Element index="30" value="0.352"/>
         <Element index="31" value="0.16"/>
-        <Element index="32" value="0.010321215931276105"/>
+        <Element index="32" value="0.020759431233394958"/>
         <Element index="33" value="0.59"/>
         <Element index="34" value="0.0767"/>
         <Element index="35" value="0.119475"/>
@@ -1088,39 +1088,39 @@
         <Domain name="range" id="10649.NumberOfTableValues.range"/>
       </Property>
       <Property name="RGBPoints" id="10649.RGBPoints" number_of_elements="36">
-        <Element index="0" value="0.000003070300611851928"/>
+        <Element index="0" value="0.0017358389599986049"/>
         <Element index="1" value="0.0564"/>
         <Element index="2" value="0.0564"/>
         <Element index="3" value="0.47"/>
-        <Element index="4" value="0.02420507912889659"/>
+        <Element index="4" value="0.025665695613855923"/>
         <Element index="5" value="0.243"/>
         <Element index="6" value="0.46035"/>
         <Element index="7" value="0.81"/>
-        <Element index="8" value="0.04210341190839976"/>
+        <Element index="8" value="0.04336276120850976"/>
         <Element index="9" value="0.356814"/>
         <Element index="10" value="0.745025"/>
         <Element index="11" value="0.954368"/>
-        <Element index="12" value="0.060952239684719856"/>
+        <Element index="12" value="0.06199963346076037"/>
         <Element index="13" value="0.6882"/>
         <Element index="14" value="0.93"/>
         <Element index="15" value="0.91791"/>
-        <Element index="16" value="0.07052503177983217"/>
+        <Element index="16" value="0.07146477927731329"/>
         <Element index="17" value="0.899496"/>
         <Element index="18" value="0.944646"/>
         <Element index="19" value="0.768657"/>
-        <Element index="20" value="0.08296877292676358"/>
+        <Element index="20" value="0.08376859025418412"/>
         <Element index="21" value="0.957108"/>
         <Element index="22" value="0.833819"/>
         <Element index="23" value="0.508916"/>
-        <Element index="24" value="0.09959996710240808"/>
+        <Element index="24" value="0.10021276624921642"/>
         <Element index="25" value="0.927521"/>
         <Element index="26" value="0.621439"/>
         <Element index="27" value="0.315357"/>
-        <Element index="28" value="0.11955754115710446"/>
+        <Element index="28" value="0.11994591690113582"/>
         <Element index="29" value="0.8"/>
         <Element index="30" value="0.352"/>
         <Element index="31" value="0.16"/>
-        <Element index="32" value="0.1410469932590525"/>
+        <Element index="32" value="0.14119371959462798"/>
         <Element index="33" value="0.59"/>
         <Element index="34" value="0.0767"/>
         <Element index="35" value="0.119475"/>
@@ -1410,11 +1410,11 @@
         <Domain name="bool" id="11123.AllowDuplicateScalars.bool"/>
       </Property>
       <Property name="Points" id="11123.Points" number_of_elements="8">
-        <Element index="0" value="0.0000030703006117146966"/>
+        <Element index="0" value="0.0001024959977518753"/>
         <Element index="1" value="0"/>
         <Element index="2" value="0.5"/>
         <Element index="3" value="0"/>
-        <Element index="4" value="0.010321215931276105"/>
+        <Element index="4" value="0.020759431233394958"/>
         <Element index="5" value="1"/>
         <Element index="6" value="0.5"/>
         <Element index="7" value="0"/>
@@ -1482,11 +1482,11 @@
         <Domain name="bool" id="10647.AllowDuplicateScalars.bool"/>
       </Property>
       <Property name="Points" id="10647.Points" number_of_elements="8">
-        <Element index="0" value="0.000003070300611851928"/>
+        <Element index="0" value="0.0017358389599986049"/>
         <Element index="1" value="0"/>
         <Element index="2" value="0.5"/>
         <Element index="3" value="0"/>
-        <Element index="4" value="0.1410469932590525"/>
+        <Element index="4" value="0.14119371959462798"/>
         <Element index="5" value="1"/>
         <Element index="6" value="0.5"/>
         <Element index="7" value="0"/>
@@ -2295,7 +2295,7 @@
         <Domain name="bool" id="10497.EnableViewAngleLOD.bool"/>
       </Property>
       <Property name="Input" id="10497.Input" number_of_elements="1">
-        <Proxy value="14951" output_port="0"/>
+        <Proxy value="15042" output_port="0"/>
         <Domain name="input_type" id="10497.Input.input_type"/>
       </Property>
       <Property name="LastRadialAxisColor" id="10497.LastRadialAxisColor" number_of_elements="3">
@@ -8460,9 +8460,9 @@
         <Domain name="range" id="10384.GridColor.range"/>
       </Property>
     </Proxy>
-    <Proxy group="misc" type="RepresentationAnimationHelper" id="14963" servers="16">
-      <Property name="Source" id="14963.Source" number_of_elements="1">
-        <Proxy value="14951"/>
+    <Proxy group="misc" type="RepresentationAnimationHelper" id="15053" servers="16">
+      <Property name="Source" id="15053.Source" number_of_elements="1">
+        <Proxy value="15042"/>
       </Property>
     </Proxy>
     <Proxy group="representations" type="GeometryRepresentation" id="10893" servers="21">
@@ -9510,7 +9510,7 @@
         </Domain>
       </Property>
       <Property name="Input" id="10630.Input" number_of_elements="1">
-        <Proxy value="14951" output_port="0"/>
+        <Proxy value="15042" output_port="0"/>
         <Domain name="input_array_cell" id="10630.Input.input_array_cell"/>
         <Domain name="input_array_point" id="10630.Input.input_array_point"/>
         <Domain name="input_type" id="10630.Input.input_type"/>
@@ -14228,10 +14228,10 @@
         <Element index="0" value="%-#6.1e"/>
       </Property>
       <Property name="DataRangeMax" id="10655.DataRangeMax" number_of_elements="1">
-        <Element index="0" value="0.1410469932590525"/>
+        <Element index="0" value="0.14119371959462798"/>
       </Property>
       <Property name="DataRangeMin" id="10655.DataRangeMin" number_of_elements="1">
-        <Element index="0" value="0.000003070300611851928"/>
+        <Element index="0" value="0.0017358389599986049"/>
       </Property>
       <Property name="DrawAnnotations" id="10655.DrawAnnotations" number_of_elements="1">
         <Element index="0" value="1"/>
@@ -15913,7 +15913,7 @@
         <Element index="0" value="1"/>
       </Property>
       <Property name="Input" id="10932.Input" number_of_elements="1">
-        <Proxy value="14951" output_port="0"/>
+        <Proxy value="15042" output_port="0"/>
         <Domain name="groups" id="10932.Input.groups"/>
         <Domain name="input_array" id="10932.Input.input_array"/>
         <Domain name="input_type" id="10932.Input.input_type"/>
@@ -15974,7 +15974,7 @@
         <Element index="0" value="1"/>
       </Property>
       <Property name="Input" id="11458.Input" number_of_elements="1">
-        <Proxy value="14951" output_port="0"/>
+        <Proxy value="15042" output_port="0"/>
         <Domain name="groups" id="11458.Input.groups"/>
         <Domain name="input_array" id="11458.Input.input_array"/>
         <Domain name="input_type" id="11458.Input.input_type"/>
@@ -16117,7 +16117,7 @@
         </Domain>
       </Property>
       <Property name="Input" id="10687.Input" number_of_elements="1">
-        <Proxy value="14951" output_port="0"/>
+        <Proxy value="15042" output_port="0"/>
         <Domain name="groups" id="10687.Input.groups"/>
         <Domain name="input_array" id="10687.Input.input_array"/>
         <Domain name="input_array_htg" id="10687.Input.input_array_htg"/>
@@ -16169,27 +16169,27 @@
         <Domain name="bool" id="10687.UseImplicitArraysHTG.bool"/>
       </Property>
     </Proxy>
-    <Proxy group="sources" type="XMLUnstructuredGridReader" id="14951" servers="1">
-      <Property name="FileName" id="14951.FileName" number_of_elements="1">
-        <Element index="0" value="/Users/ocolomesgene/Progs/git_repos/CMOE/GeneralizedWSBM.jl/data/sims/ManufacturedLinearElasticity/VTK_circle/solution.vtu"/>
-        <Domain name="files" id="14951.FileName.files"/>
+    <Proxy group="sources" type="XMLUnstructuredGridReader" id="15042" servers="1">
+      <Property name="FileName" id="15042.FileName" number_of_elements="1">
+        <Element index="0" value="/Users/ocolomesgene/Progs/git_repos/CMOE/TheGeneralizedSBM.jl/data/sims/Journal_paper_GSBM/LinearElasticity/ManufacturedLinearElasticity/VTK_circle/solution.vtu"/>
+        <Domain name="files" id="15042.FileName.files"/>
       </Property>
-      <Property name="FileNameInfo" id="14951.FileNameInfo" number_of_elements="1">
-        <Element index="0" value="/Users/ocolomesgene/Progs/git_repos/CMOE/GeneralizedWSBM.jl/data/sims/ManufacturedLinearElasticity/VTK_circle/solution.vtu"/>
+      <Property name="FileNameInfo" id="15042.FileNameInfo" number_of_elements="1">
+        <Element index="0" value="/Users/ocolomesgene/Progs/git_repos/CMOE/TheGeneralizedSBM.jl/data/sims/Journal_paper_GSBM/LinearElasticity/ManufacturedLinearElasticity/VTK_circle/solution.vtu"/>
       </Property>
-      <Property name="TimestepValues" id="14951.TimestepValues"/>
-      <Property name="CellArrayInfo" id="14951.CellArrayInfo" number_of_elements="2">
+      <Property name="TimestepValues" id="15042.TimestepValues"/>
+      <Property name="CellArrayInfo" id="15042.CellArrayInfo" number_of_elements="2">
         <Element index="0" value="cell"/>
         <Element index="1" value="1"/>
       </Property>
-      <Property name="CellArrayStatus" id="14951.CellArrayStatus" number_of_elements="2">
+      <Property name="CellArrayStatus" id="15042.CellArrayStatus" number_of_elements="2">
         <Element index="0" value="cell"/>
         <Element index="1" value="1"/>
-        <Domain name="array_list" id="14951.CellArrayStatus.array_list">
+        <Domain name="array_list" id="15042.CellArrayStatus.array_list">
           <String text="cell"/>
         </Domain>
       </Property>
-      <Property name="PointArrayInfo" id="14951.PointArrayInfo" number_of_elements="10">
+      <Property name="PointArrayInfo" id="15042.PointArrayInfo" number_of_elements="10">
         <Element index="0" value="weights"/>
         <Element index="1" value="1"/>
         <Element index="2" value="ϕ"/>
@@ -16201,7 +16201,7 @@
         <Element index="8" value="dcf"/>
         <Element index="9" value="1"/>
       </Property>
-      <Property name="PointArrayStatus" id="14951.PointArrayStatus" number_of_elements="10">
+      <Property name="PointArrayStatus" id="15042.PointArrayStatus" number_of_elements="10">
         <Element index="0" value="weights"/>
         <Element index="1" value="1"/>
         <Element index="2" value="ϕ"/>
@@ -16212,7 +16212,7 @@
         <Element index="7" value="1"/>
         <Element index="8" value="dcf"/>
         <Element index="9" value="1"/>
-        <Domain name="array_list" id="14951.PointArrayStatus.array_list">
+        <Domain name="array_list" id="15042.PointArrayStatus.array_list">
           <String text="weights"/>
           <String text="ϕ"/>
           <String text="uₕ"/>
@@ -16220,13 +16220,13 @@
           <String text="dcf"/>
         </Domain>
       </Property>
-      <Property name="TimeArray" id="14951.TimeArray" number_of_elements="1">
+      <Property name="TimeArray" id="15042.TimeArray" number_of_elements="1">
         <Element index="0" value="None"/>
-        <Domain name="array_list" id="14951.TimeArray.array_list">
+        <Domain name="array_list" id="15042.TimeArray.array_list">
           <String text="None"/>
         </Domain>
       </Property>
-      <Property name="TimeArrayInfo" id="14951.TimeArrayInfo"/>
+      <Property name="TimeArrayInfo" id="15042.TimeArrayInfo"/>
     </Proxy>
     <Proxy group="misc" type="TimeKeeper" id="256" servers="16">
       <Property name="SuppressedTimeSources" id="256.SuppressedTimeSources"/>
@@ -16242,12 +16242,12 @@
         <Element index="1" value="1"/>
       </Property>
       <Property name="TimeSources" id="256.TimeSources" number_of_elements="6">
-        <Proxy value="14951"/>
+        <Proxy value="15042"/>
         <Proxy value="10687"/>
         <Proxy value="10932"/>
         <Proxy value="11206"/>
         <Proxy value="11458"/>
-        <Proxy value="14951"/>
+        <Proxy value="15042"/>
       </Property>
       <Property name="TimestepValues" id="256.TimestepValues"/>
       <Property name="Views" id="256.Views" number_of_elements="1">
@@ -17276,8 +17276,8 @@
       <Item id="10381" name="LegendGrid" logname="RenderView1/LegendGrid/LegendGridActor"/>
       <Item id="10384" name="PolarGrid" logname="RenderView1/PolarGrid/PolarGridActor"/>
     </ProxyCollection>
-    <ProxyCollection name="pq_helper_proxies.14951">
-      <Item id="14963" name="RepresentationAnimationHelper"/>
+    <ProxyCollection name="pq_helper_proxies.15042">
+      <Item id="15053" name="RepresentationAnimationHelper"/>
     </ProxyCollection>
     <ProxyCollection name="representations">
       <Item id="10893" name="GeometryRepresentation1" logname="GeometryRepresentation1"/>
@@ -17303,7 +17303,7 @@
       <Item id="11458" name="Calculator2" logname="Calculator2"/>
       <Item id="11206" name="Clip1" logname="Clip1"/>
       <Item id="10687" name="Contour1" logname="Contour1"/>
-      <Item id="14951" name="solution.vtu" logname="solution.vtu"/>
+      <Item id="15042" name="solution.vtu" logname="solution.vtu"/>
     </ProxyCollection>
     <ProxyCollection name="timekeeper">
       <Item id="256" name="TimeKeeper1"/>

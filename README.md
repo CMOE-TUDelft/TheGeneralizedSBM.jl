@@ -1,5 +1,7 @@
 # TheGeneralizedSBM.jl
 
+[![DOI](https://zenodo.org/badge/1029609698.svg)](https://doi.org/10.5281/zenodo.16764244)
+
 A [julia](https://julialang.org/)-based implementation of the Generalized Shifted Boundary Method using [Gridap.jl](https://github.com/gridap/Gridap.jl).
 
 ## What is GSBM?

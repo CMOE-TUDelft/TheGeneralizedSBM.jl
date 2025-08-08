@@ -37,6 +37,7 @@ include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsStokes.jl")
 include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_h.jl")
 include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_dt.jl")
 include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_betap.jl")
+include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_beta_div.jl")
 
 function run_tests(test_type::String)
   if test_type == "all"
@@ -51,6 +52,7 @@ function run_tests(test_type::String)
     run_manufactured_solutions_transient_stokes_h()
     run_manufactured_solutions_transient_stokes_dt()
     run_manufactured_solutions_transient_stokes_betap()
+    run_manufactured_solutions_transient_stokes_beta_div()
   elseif test_type == "ManufacturedSolutionsPoisson.jl"
     run_manufactured_solutions_poisson()
   elseif test_type == "ConditionNumberPoisson.jl"
@@ -67,6 +69,8 @@ function run_tests(test_type::String)
     run_manufactured_solutions_transient_stokes_dt()
   elseif test_type == "ManufacturedSolutionsTransientStokes_betap.jl"
     run_manufactured_solutions_transient_stokes_betap()
+  elseif test_type == "ManufacturedSolutionsTransientStokes_beta_div.jl"
+    run_manufactured_solutions_transient_stokes_beta_div()
   else
     error("Unknown test type: $test_type")
   end

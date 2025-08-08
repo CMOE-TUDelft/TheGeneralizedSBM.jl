@@ -1,8 +1,9 @@
-# TheGeneralizedSBM.jl
+# TheGeneralizedSBM.jl: A [julia](https://julialang.org/)-based implementation of the Generalized Shifted Boundary Method using [Gridap.jl](https://github.com/gridap/Gridap.jl).
 
 [![DOI](https://zenodo.org/badge/1029609698.svg)](https://doi.org/10.5281/zenodo.16764244)
 
-A [julia](https://julialang.org/)-based implementation of the Generalized Shifted Boundary Method using [Gridap.jl](https://github.com/gridap/Gridap.jl).
+## Abstract
+The Generalized Shifted Boundary Method (GSBM) is a geometry-agnostic finite element framework for solving PDEs on complex, parametrized, and evolving domains.  This repository provides the reference implementation in Julia using the Gridap.jl ecosystem, with examples for the Poisson equation, linear elasticity, and transient Stokes flow.
 
 ## What is GSBM?
 
@@ -38,4 +39,11 @@ All the tests in `scripts` folder can be executed.
 After execution, the data will be stored in the respective folder `data/<problem-type>/<test-name>`. If the flag to generate VTK files is active, the VTK output will be stored in `data/<problem-type>/<test-name>/VTK_<geometry-name>`. The plots shown in the manuscript are stored in `plots/<problem-type>/<test-name>`.
 
 This repository uses DrWatson package, the data will only be generated the first time the tests are executed. If the data is already stored, the scripts will only regenerate the figures.
+
+
+## Authors
+- [Oriol Colomés](www.oriolcolomes.com)$^*$
+- [Jan Modderman]()$^*$
+
+$^*$ Faculty of Civil Engineering and Geosciences, Delft University of Technology, Delft, 2628 CN, The Netherlands
 

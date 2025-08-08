@@ -18,7 +18,7 @@ pkg> add https://github.com/CMOE-TUDelft/TheGeneralizedSBM.jl
 ```
 or
 ```julia
-using Pkg; Pkg.add(url="https://github.com/JuliaLang/Example.jl")
+using Pkg; Pkg.add(url="https://github.com/CMOE-TUDelft/TheGeneralizedSBM.jl")
 ```
 
 ## Usage

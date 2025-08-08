@@ -1,9 +1,9 @@
-# TheGeneralizedSBM.jl: A [julia](https://julialang.org/)-based implementation of the Generalized Shifted Boundary Method using [Gridap.jl](https://github.com/gridap/Gridap.jl).
+# TheGeneralizedSBM.jl: A julia-based implementation of the Generalized Shifted Boundary Method using Gridap.jl
 
 [![DOI](https://zenodo.org/badge/1029609698.svg)](https://doi.org/10.5281/zenodo.16764244)
 
 ## Abstract
-The Generalized Shifted Boundary Method (GSBM) is a geometry-agnostic finite element framework for solving PDEs on complex, parametrized, and evolving domains.  This repository provides the reference implementation in Julia using the Gridap.jl ecosystem, with examples for the Poisson equation, linear elasticity, and transient Stokes flow.
+The Generalized Shifted Boundary Method (GSBM) is a geometry-agnostic finite element framework for solving PDEs on complex, parametrized, and evolving domains.  This repository provides the reference implementation in [julia](https://julialang.org/) using the [Gridap.jl](https://github.com/gridap/Gridap.jl) ecosystem, with examples for the Poisson equation, linear elasticity, and transient Stokes flow.
 
 ## What is GSBM?
 

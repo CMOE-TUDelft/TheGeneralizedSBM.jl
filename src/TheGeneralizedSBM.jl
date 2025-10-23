@@ -10,6 +10,7 @@ using LinearAlgebra
 using Gridap
 using GridapSolvers
 using GridapSolvers.LinearSolvers
+using CSV
 
 include("HelperFunctions.jl")
 include("TimeIntegrator.jl")
@@ -38,6 +39,7 @@ include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStok
 include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_dt.jl")
 include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_betap.jl")
 include("../scripts/Journal_paper_GSBM/Stokes/ManufacturedSolutionsTransientStokes_beta_div.jl")
+include("../scripts/Journal_paper_GSBM/Stokes/CylinderCrossFlow.jl")
 
 function run_tests(test_type::String)
   if test_type == "all"
@@ -53,6 +55,7 @@ function run_tests(test_type::String)
     run_manufactured_solutions_transient_stokes_dt()
     run_manufactured_solutions_transient_stokes_betap()
     run_manufactured_solutions_transient_stokes_beta_div()
+    run_cylinder_cross_flow()
   elseif test_type == "ManufacturedSolutionsPoisson.jl"
     run_manufactured_solutions_poisson()
   elseif test_type == "ConditionNumberPoisson.jl"
@@ -71,6 +74,8 @@ function run_tests(test_type::String)
     run_manufactured_solutions_transient_stokes_betap()
   elseif test_type == "ManufacturedSolutionsTransientStokes_beta_div.jl"
     run_manufactured_solutions_transient_stokes_beta_div()
+  elseif test_type == "CylinderCrossFlow.jl"
+    run_cylinder_cross_flow()
   else
     error("Unknown test type: $test_type")
   end

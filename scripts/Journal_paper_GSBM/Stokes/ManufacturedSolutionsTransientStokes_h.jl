@@ -143,7 +143,7 @@ function run_manufactured_solutions_transient_stokes_h()
   plt_label = "Error norm"
   plt_name = ["l2l2ᵤ","l2l2ₚ","l∞l2ᵤ","l∞l2ₚ"]
   plt_slope = [3.0,2.0,3.0,2.0]
-  shift = [3.0e3,1.0e2,4.0e3,3.0e2]
+  shift = [8.0e2,3.0e1,4.0e3,3.0e2]
   for (igeom, geom_case) in enumerate(plot_geom_cases)
     plts = []
     plot_ref_line = Bool[]

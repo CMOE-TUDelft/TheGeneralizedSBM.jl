@@ -200,10 +200,10 @@ function main_transient_stokes(params::TransientStokesParams)
     for (t,(uh,ph)) in xₕₜ
       global lastl2ᵤ = l2norm(uh-u₀(t),t)
       global lastl2ₚ = l2norm(ph-p₀(t),t)
-      l2l2ᵤ += √(Δt*(l2norm(uh-u₀(t),t))^2)
-      l2h1ᵤ += √(Δt*(h1norm(uh-u₀(t),t))^2)
-      l2l2ₚ += √(Δt*(l2norm(ph-p₀(t),t))^2)
-      l2h1ₚ += √(Δt*(h1norm(ph-p₀(t),t))^2)
+      l2l2ᵤ += (l2norm(uh-u₀(t),t))^2
+      l2h1ᵤ += (h1norm(uh-u₀(t),t))^2
+      l2l2ₚ += (l2norm(ph-p₀(t),t))^2
+      l2h1ₚ += (h1norm(ph-p₀(t),t))^2
       l∞l2ᵤ = max(l∞l2ᵤ,l2norm(uh-u₀(t),t))
       l∞h1ᵤ = max(l∞h1ᵤ,h1norm(uh-u₀(t),t))
       l∞l2ₚ = max(l∞l2ₚ,l2norm(ph-p₀(t),t))
@@ -216,6 +216,10 @@ function main_transient_stokes(params::TransientStokesParams)
       end
     end
   end
+  l2l2ᵤ = √(Δt*l2l2ᵤ)
+  l2h1ᵤ = √(Δt*l2h1ᵤ)
+  l2l2ₚ = √(Δt*l2l2ₚ)
+  l2h1ₚ = √(Δt*l2h1ₚ)
 
   return l2l2ᵤ,l2h1ᵤ,l2l2ₚ,l2h1ₚ,l∞l2ᵤ,l∞h1ᵤ,l∞l2ₚ,l∞h1ₚ,lastl2ᵤ,lastl2ₚ,FD,time
 

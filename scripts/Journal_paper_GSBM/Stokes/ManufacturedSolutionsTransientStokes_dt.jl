@@ -146,7 +146,8 @@ function run_manufactured_solutions_transient_stokes_dt()
   plt_label = "Error norm"
   plt_name = ["l2l2ᵤ","l2l2ₚ","l∞l2ᵤ","l∞l2ₚ"]
   plt_slope = [0.5,0.5,0.0,1.0]
-  shift = [3.0e-3,2.0e-2,5.0e-1,2.0e-3]
+  shift = [3.0e-3,2.0e-3,5.0e-1,2.0e-3]
+  ylims = [(1e-2,1e-1),(1.0e-2,1.0e0),(5e-2,1e0),(1.0e-1,1.0e1)]
   for (igeom, geom_case) in enumerate(plot_geom_cases)
     plts = []
     plot_ref_line = Bool[]
@@ -162,13 +163,13 @@ function run_manufactured_solutions_transient_stokes_dt()
                                       all_results.:βdiv.==βdiv .&&
                                       all_results.:global_gp.==global_gp ,:] |> orderby(:nΔt)
           for iplot in 1:length(plt_name)
-            if iplot == 3
-              plot!(plts[iplot],results.:nΔt*Δtmin,results[!,plt_name[iplot]],marker=markers[iglobal_gp],ls=lines[iβdiv],color=colors[iglobal_gp],label="global_gp=$(global_gp)",ylims=(5e-2,1e0),xticks = (results.:nΔt*Δtmin, string.(results.:nΔt) .* "Δtmin"))
+            if iplot == 1 || iplot == 3 
+              plot!(plts[iplot],results.:nΔt*Δtmin,results[!,plt_name[iplot]],marker=markers[iglobal_gp],ls=lines[iβdiv],color=colors[iglobal_gp],label="global_gp=$(global_gp)",ylims=ylims[iplot],xticks = (results.:nΔt*Δtmin, string.(results.:nΔt) .* "Δtmin"))
             else
               plot!(plts[iplot],results.:nΔt*Δtmin,results[!,plt_name[iplot]],marker=markers[iglobal_gp],ls=lines[iβdiv],color=colors[iglobal_gp],label="global_gp=$(global_gp)")
             end
-            if plot_ref_line[iplot] && iplot !=3
-              plot!(plts[iplot],results.:nΔt*Δtmin,shift[iplot]*(results.:nΔt*Δtmin).^(-plt_slope[iplot]),xticks = (results.:nΔt*Δtmin, string.(results.:nΔt) .* "Δtmin"),ls=:dashdot,color=:black,label=false)
+            if plot_ref_line[iplot] && iplot !=3 && iplot !=1
+              plot!(plts[iplot],results.:nΔt*Δtmin,shift[iplot]*(results.:nΔt*Δtmin).^(-plt_slope[iplot]),xticks = (results.:nΔt*Δtmin, string.(results.:nΔt) .* "Δtmin"),ls=:dashdot,color=:black,label=false,ylims=ylims[iplot])
               x_triangle = [2Δtmin, 2.5Δtmin, 2.5Δtmin]
               y_triangle = [shift[iplot]*(x_triangle[1]).^(-plt_slope[iplot]),shift[iplot]*(x_triangle[1]).^(-plt_slope[iplot]),shift[iplot]*(x_triangle[2]).^(-plt_slope[iplot])]
               plot!(plts[iplot],x_triangle, y_triangle, lw = 1, color = :black, label = "")

@@ -141,8 +141,8 @@ function run_manufactured_solutions_transient_stokes_beta_div()
   colors = ["#0072B2", "#E69F00", "#009E73"]
   plt_name = ["l2l2ᵤ","l2l2ₚ","l∞l2ᵤ","l∞l2ₚ"]
   plt_slope = [3.0,2.0,3.0,2.0]
-  plt_ylims = [(1.0e-2,1.0e0),(1.0e-1,1.0e1),(1.0e-2,1.0e0),(1.0e-1,1.0e1)]
-  shift = [3.0e3,1.0e2,4.0e3,3.0e2]
+  plt_ylims = [(5.0e-3,1.0e-1),(1.0e-2,1.0e0),(1.0e-2,1.0e0),(1.0e-1,1.0e1)]
+  shift = [6.0e2,2.0e1,4.0e3,3.0e2]
   for (igeom, geom_case) in enumerate(plot_geom_cases)
     plts = []
     plot_ref_line = Bool[]

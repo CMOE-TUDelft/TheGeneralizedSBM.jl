@@ -63,14 +63,18 @@ function main_transient_stokes(params::TransientStokesParams)
   length(in_out_wall_tags[3])>0 && add_tag_from_tags!(labels,"wall",in_out_wall_tags[3])
   Γ_out = Boundary(Ω,tags="outlet")
 
-  # Compute weights
+  # Compute weights with cache that stores only the most recent value
   α_buffer = Ref{Any}((α=nothing,t=nothing))
   function α(t)
     if α_buffer[].t == t
       return α_buffer[].α
     else
       println("Computing α at t=$t")
-      α_buffer[] = (α=compute_weights(Ω,params(t)),t=t)
+      # Clear old reference before computing new one
+      α_buffer[] = (α=nothing,t=nothing)
+      GC.gc()  # Force garbage collection of old weights
+      new_α = compute_weights(Ω,params(t))
+      α_buffer[] = (α=new_α,t=t)
       println("Done computing α")
       return α_buffer[].α
     end
@@ -80,8 +84,12 @@ function main_transient_stokes(params::TransientStokesParams)
     if α_ref_buffer[].t == t
       return α_ref_buffer[].α
     else
+      # Clear old reference before computing new one
+      α_ref_buffer[] = (α=nothing,t=nothing)
+      GC.gc()  # Force garbage collection of old weights
       params_ref = reconstruct(params(t),weight_approach=:binary)
-      α_ref_buffer[] = (α=compute_weights(Ω,params_ref),t=t)
+      new_α_ref = compute_weights(Ω,params_ref)
+      α_ref_buffer[] = (α=new_α_ref,t=t)
       return α_ref_buffer[].α
     end
   end
@@ -200,10 +208,10 @@ function main_transient_stokes(params::TransientStokesParams)
     for (t,(uh,ph)) in xₕₜ
       global lastl2ᵤ = l2norm(uh-u₀(t),t)
       global lastl2ₚ = l2norm(ph-p₀(t),t)
-      l2l2ᵤ += √(Δt*(l2norm(uh-u₀(t),t))^2)
-      l2h1ᵤ += √(Δt*(h1norm(uh-u₀(t),t))^2)
-      l2l2ₚ += √(Δt*(l2norm(ph-p₀(t),t))^2)
-      l2h1ₚ += √(Δt*(h1norm(ph-p₀(t),t))^2)
+      l2l2ᵤ += (l2norm(uh-u₀(t),t))^2
+      l2h1ᵤ += (h1norm(uh-u₀(t),t))^2
+      l2l2ₚ += (l2norm(ph-p₀(t),t))^2
+      l2h1ₚ += (h1norm(ph-p₀(t),t))^2
       l∞l2ᵤ = max(l∞l2ᵤ,l2norm(uh-u₀(t),t))
       l∞h1ᵤ = max(l∞h1ᵤ,h1norm(uh-u₀(t),t))
       l∞l2ₚ = max(l∞l2ₚ,l2norm(ph-p₀(t),t))
@@ -216,6 +224,10 @@ function main_transient_stokes(params::TransientStokesParams)
       end
     end
   end
+  l2l2ᵤ = √(Δt*l2l2ᵤ)
+  l2h1ᵤ = √(Δt*l2h1ᵤ)
+  l2l2ₚ = √(Δt*l2l2ₚ)
+  l2h1ₚ = √(Δt*l2h1ₚ)
 
   return l2l2ᵤ,l2h1ᵤ,l2l2ₚ,l2h1ₚ,l∞l2ᵤ,l∞h1ᵤ,l∞l2ₚ,l∞h1ₚ,lastl2ᵤ,lastl2ₚ,FD,time
 
